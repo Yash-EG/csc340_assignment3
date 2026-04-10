@@ -21,6 +21,7 @@ public class Antihero {
     private String universe;
     private String weapon;
     private String morality;
+    private String imageUrl;
 
     // Constructors
     public Antihero() {}
@@ -50,4 +51,7 @@ public class Antihero {
 
     public String getMorality() { return morality; }
     public void setMorality(String morality) { this.morality = morality; }
+
+    public String getImageUrl() { return imageUrl; }
+    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
 }

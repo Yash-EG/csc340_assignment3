@@ -2,6 +2,9 @@ package com.yash.antiheros;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+import java.io.IOException;
+import java.nio.file.*;
 import java.util.List;
 
 @RestController
@@ -32,9 +35,18 @@ public class AntiherosController {
     }
 
     @PostMapping
-    public String addAntihero(@RequestBody Antihero antihero) {
-        antiherosService.addAntihero(antihero);
-        return "Antihero added successfully!";
+    public Antihero addAntihero(@RequestBody Antihero antihero) {
+        return antiherosService.addAntihero(antihero);
+    }
+
+    @PostMapping("/{id}/image")
+    public Antihero uploadImage(@PathVariable long id,
+                                @RequestParam("file") MultipartFile file) throws IOException {
+        String filename = id + "_" + Paths.get(file.getOriginalFilename()).getFileName().toString();
+        Path uploadDir = Paths.get("src/main/resources/static/images/uploads");
+        Files.createDirectories(uploadDir);
+        Files.copy(file.getInputStream(), uploadDir.resolve(filename), StandardCopyOption.REPLACE_EXISTING);
+        return antiherosService.updateImageUrl(id, "/images/uploads/" + filename);
     }
 
     @PutMapping("/{id}")

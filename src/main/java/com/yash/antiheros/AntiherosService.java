@@ -1,3 +1,5 @@
+
+
 package com.yash.antiheros;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +20,15 @@ public class AntiherosService {
         return antiherosRepository.findById(id).orElse(null);
     }
 
-    public void addAntihero(Antihero antihero) {
-        antiherosRepository.save(antihero);
+    public Antihero addAntihero(Antihero antihero) {
+        return antiherosRepository.save(antihero);
+    }
+
+    public Antihero updateImageUrl(long id, String imageUrl) {
+        Antihero antihero = antiherosRepository.findById(id).orElse(null);
+        if (antihero == null) return null;
+        antihero.setImageUrl(imageUrl);
+        return antiherosRepository.save(antihero);
     }
 
     public void updateAntihero(Antihero antihero) {
