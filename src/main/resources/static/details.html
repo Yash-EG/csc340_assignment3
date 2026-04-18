@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <link href="src/output.css" rel="stylesheet">
+</head>
+<body class="bg-cover bg-fixed bg-center bg-no-repeat min-h-screen overflow-y-auto" style="background-image: url('images/gem2.png')">
+
+  <nav class="bg-white/10 backdrop-blur-md border-b-2 border-white/20 text-gray-100 p-2 relative">
+    <div class="flex justify-between items-center px-8 p-1">
+      <div class="flex-1">
+        <div class="text-2xl tracking-widest text-gray-100" style="font-family: 'Orbitron', sans-serif;">
+          ANTIHERO'S
+        </div>
+      </div>
+      <div class="flex-1 max-w-md mx-8 relative">
+        <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+        <input
+          type="text"
+          placeholder="Search by name..."
+          onclick="window.location.href='index.html'"
+          class="w-full p-1 pl-10 pr-4 h-10 rounded-full bg-black/30 border border-white/30 text-white text-sm placeholder-gray-400 focus:outline-none focus:border-white/50 focus:shadow-[0_0_10px_rgba(255,255,255,0.15)] transition-all cursor-pointer"
+        >
+      </div>
+      <div class="flex gap-6 flex-1 justify-end">
+        <a class="relative hover:text-white hover:scale-105 transition-all before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-1 before:h-1 before:bg-white before:rounded-full before:opacity-0 hover:before:opacity-100 before:transition-opacity" href="index.html">Home</a>
+        <a class="relative hover:text-white hover:scale-105 transition-all before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-1 before:h-1 before:bg-white before:rounded-full before:opacity-0 hover:before:opacity-100 before:transition-opacity" href="about.html">About</a>
+        <a class="relative hover:text-white hover:scale-105 transition-all before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-1 before:h-1 before:bg-white before:rounded-full before:opacity-0 hover:before:opacity-100 before:transition-opacity" href="new-character-form.html">+ Add Character</a>
+      </div>
+    </div>
+  </nav>
+
+  <div style="display:flex; justify-content:center; align-items:flex-start; padding:24px; min-height:94vh;">
+    <div id="character-container" style="width:100%; max-width:1100px;">
+      <p class="text-gray-400 text-center py-16">Loading character...</p>
+    </div>
+  </div>
+
+  <script src="js/details.js"></script>
+</body>
+</html>

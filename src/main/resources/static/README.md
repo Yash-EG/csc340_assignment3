@@ -1,0 +1,6 @@
+# csc340_assignment2
+This static webapp is for CSC340 Assignment 2
+
+# csc340 assignment4
+# Demo Video for Assignment 4
+https://uncg-my.sharepoint.com/:v:/g/personal/yrpatel_uncg_edu/IQBa2lvqF7HaRL77dltCnH_wAQGb9zdRl5dfLzqohycfMLc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=hKW9ui

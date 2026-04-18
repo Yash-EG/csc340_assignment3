@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="src/output.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-cover bg-center bg-no-repeat bg-fixed min-h-screen" style="background-image: url('images/gem2.png')">
+
+  <nav class="bg-white/10 backdrop-blur-md border-b-2 border-white/20 text-gray-100 p-2 relative">
+    <div class="flex justify-between items-center px-8 p-1">
+      <div class="flex-1">
+        <div class="text-2xl tracking-widest text-gray-100" style="font-family: 'Orbitron', sans-serif;">
+          ANTIHERO'S
+        </div>
+      </div>
+      <div class="flex-1 max-w-md mx-8 relative">
+        <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+        <input
+          type="text"
+          placeholder="Search by name..."
+          onclick="window.location.href='index.html'"
+          class="w-full p-1 pl-10 pr-4 h-10 rounded-full bg-black/30 border border-white/30 text-white text-sm placeholder-gray-400 focus:outline-none focus:border-white/50 focus:shadow-[0_0_10px_rgba(255,255,255,0.15)] transition-all cursor-pointer"
+        >
+      </div>
+      <div class="flex gap-6 flex-1 justify-end">
+        <a class="relative hover:text-white hover:scale-105 transition-all before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-1 before:h-1 before:bg-white before:rounded-full before:opacity-0 hover:before:opacity-100 before:transition-opacity" href="index.html">Home</a>
+        <a class="relative hover:text-white hover:scale-105 transition-all before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-1 before:h-1 before:bg-white before:rounded-full before:opacity-0 hover:before:opacity-100 before:transition-opacity" href="about.html">About</a>
+        <a class="relative hover:text-white hover:scale-105 transition-all before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-1 before:h-1 before:bg-white before:rounded-full before:opacity-0 hover:before:opacity-100 before:transition-opacity" href="new-character-form.html">+ Add Character</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="flex justify-center items-center min-h-[90vh] p-4">
+    <div class="bg-white/10 bg-gradient-to-t from-black to-black/10 backdrop-blur-xl border-2 border-cyan-400/50 rounded-2xl p-8 w-full max-w-2xl shadow-[0_0_20px_rgba(34,211,238,0.2)]">
+
+      <h1 class="text-3xl md:text-4xl font-bold text-yellow-400 mb-6 tracking-wider" style="font-family: 'Orbitron', sans-serif;">
+        // ADD NEW CHARACTER
+      </h1>
+
+      <form id="character-form" class="space-y-6">
+
+        <div>
+          <label for="name" class="block text-cyan-400 font-mono mb-2">CHARACTER NAME <span class="text-red-400">*</span></label>
+          <input
+            type="text"
+            id="name"
+            placeholder="e.g. Johnny Silverhand"
+            class="w-full p-3 rounded-lg bg-black/50 border border-white/30 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:shadow-[0_0_10px_rgba(34,211,238,0.3)] transition-all"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="universe" class="block text-cyan-400 font-mono mb-2">UNIVERSE / GAME <span class="text-red-400">*</span></label>
+          <input
+            type="text"
+            id="universe"
+            placeholder="e.g. Cyberpunk 2077"
+            class="w-full p-3 rounded-lg bg-black/50 border border-white/30 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:shadow-[0_0_10px_rgba(34,211,238,0.3)] transition-all"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="weapon" class="block text-cyan-400 font-mono mb-2">WEAPON</label>
+          <input
+            type="text"
+            id="weapon"
+            placeholder="e.g. Malorian Arms 3516"
+            class="w-full p-3 rounded-lg bg-black/50 border border-white/30 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:shadow-[0_0_10px_rgba(34,211,238,0.3)] transition-all"
+          >
+        </div>
+
+        <div>
+          <label for="morality" class="block text-cyan-400 font-mono mb-2">MORALITY</label>
+          <input
+            type="text"
+            id="morality"
+            placeholder="e.g. Chaotic Neutral"
+            class="w-full p-3 rounded-lg bg-black/50 border border-white/30 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:shadow-[0_0_10px_rgba(34,211,238,0.3)] transition-all"
+          >
+        </div>
+
+        <div>
+          <label for="description" class="block text-cyan-400 font-mono mb-2">DESCRIPTION</label>
+          <textarea
+            id="description"
+            rows="4"
+            placeholder="Write a brief backstory or description..."
+            class="w-full p-3 rounded-lg bg-black/50 border border-white/30 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:shadow-[0_0_10px_rgba(34,211,238,0.3)] transition-all resize-none"
+          ></textarea>
+        </div>
+
+        <div>
+          <label for="image-upload" class="block text-cyan-400 font-mono mb-2">CHARACTER IMAGE <span class="text-gray-500 text-xs">(optional)</span></label>
+          <input
+            type="file"
+            id="image-upload"
+            accept="image/*"
+            class="w-full p-3 rounded-lg bg-black/50 border border-white/30 text-white text-sm focus:outline-none focus:border-cyan-400 transition-all"
+          >
+        </div>
+
+        <!-- Success / Error messages -->
+        <p id="success-msg" class="hidden text-green-400 text-sm font-mono bg-green-400/10 border border-green-400/30 rounded-lg p-3"></p>
+        <p id="error-msg" class="hidden text-red-400 text-sm font-mono bg-red-400/10 border border-red-400/30 rounded-lg p-3"></p>
+
+        <button
+          id="submit-btn"
+          type="submit"
+          class="w-full p-4 bg-yellow-400/20 border-2 border-yellow-400 text-yellow-400 font-bold rounded-lg hover:bg-yellow-400 hover:text-black transition-all duration-300 hover:shadow-[0_0_20px_rgba(250,204,21,0.5)] tracking-wider disabled:opacity-50 disabled:cursor-not-allowed"
+          style="font-family: 'Orbitron', sans-serif;"
+        >
+          SUBMIT CHARACTER
+        </button>
+
+      </form>
+
+      <div class="flex justify-between items-center h-10 mt-4">
+        <a href="index.html" class="text-cyan-400 hover:underline text-sm">← Back to Home</a>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/form.js"></script>
+</body>
+</html>

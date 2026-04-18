@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@keyframes glitch {
+  0%, 100% { text-shadow: 2px 0 red, -2px 0 cyan; }
+  25% { text-shadow: -2px 0 red, 2px 0 cyan; }
+  50% { text-shadow: 2px 2px red, -2px -2px cyan; }
+  75% { text-shadow: -2px -2px red, 2px 2px cyan; }
+}
+
+.glitch:hover {
+  animation: glitch 0.3s infinite;
+}
